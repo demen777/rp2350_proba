@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include "pico/stdlib.h"
 
+#define USB_PIO_D_PLUS_PIN 28
+#define USB_PIO_D_MINUS_PIN 29
 
 int main()
 {

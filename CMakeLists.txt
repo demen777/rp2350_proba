@@ -25,6 +25,9 @@ endif()
 # ====================================================================================
 set(PICO_BOARD waveshare_rp2350_pizero CACHE STRING "Board type")
 
+# Pico-PIO-USB
+set(PICO_PIO_USB_PATH ${CMAKE_CURRENT_LIST_DIR}/lib/Pico-PIO-USB)
+
 # Pull in Raspberry Pi Pico SDK (must be before project)
 include(pico_sdk_import.cmake)
 

@@ -13,7 +13,7 @@
 ## Стек
 
 - Pico SDK 2.3.1 на C, проект сгенерирован расширением **Raspberry Pi Pico** для VS Code (оно же ставит тулчейн, CMake, Ninja, picotool в `~/.pico-sdk`).
-- Плата в `CMakeLists.txt`: `pico2` (вместо `waveshare_rp2350_pizero`; для этой задачи разницы нет — отличаются число GPIO и размер флеша). Архитектура ARM, не RISC-V.
+- Плата в `CMakeLists.txt`: `waveshare_rp2350_pizero` (RP2350B, флеш 16 МБ). Архитектура ARM, не RISC-V.
 - stdio направлен в USB, UART выключен.
 - Блок в `CMakeLists.txt` между маркерами `DO NOT EDIT` нужен расширению — не трогать.
 
