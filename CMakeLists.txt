@@ -47,9 +47,16 @@ pico_set_program_version(rp2350_proba "0.1")
 pico_enable_stdio_uart(rp2350_proba 0)
 pico_enable_stdio_usb(rp2350_proba 1)
 
+target_compile_definitions(rp2350_proba PRIVATE PICO_STDIO_USB_USE_DEFAULT_DESCRIPTORS=1
+ PRIVATE PICO_STDIO_USB_ENABLE_IRQ_BACKGROUND_TASK=1
+)
+
 # Add the standard library to the build
 target_link_libraries(rp2350_proba
-        pico_stdlib)
+        pico_stdlib
+        tinyusb_host
+        tinyusb_pico_pio_usb
+        )
 
 # Add the standard include files to the build
 target_include_directories(rp2350_proba PRIVATE
